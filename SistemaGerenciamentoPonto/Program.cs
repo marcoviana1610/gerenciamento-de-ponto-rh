@@ -35,8 +35,10 @@ class Program
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Clear();
             Console.Beep();
-            Console.WriteLine("Ponto registrado com sucesso! Informações do registro: ");
+            Console.WriteLine("Ponto registrado com sucesso!");
             Console.WriteLine();
+
+            
 
             Console.WriteLine($"Colaborador: {employee.Nome}");
 
@@ -56,10 +58,11 @@ class Program
         }
         else
         {
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.Beep();
             Console.Beep();
-            Console.WriteLine("Por favor insira um código válido.");
+            Console.WriteLine("Algo deu errado. Por favor, insira um código válido");
 
             Main();
         }
