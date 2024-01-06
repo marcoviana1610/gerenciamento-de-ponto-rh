@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Media;
+
+class Program
 {
     static void Main()
     {
@@ -20,6 +22,7 @@
         
         Console.WriteLine("Insira seu código de colaborador: ");
         var employeeCode = Console.ReadLine();
+        Console.WriteLine();
 
 
         if (employeeManage.ValidateEmployee(employeeCode))
@@ -29,19 +32,35 @@
             Employee employee = employeeManage.GetEmployeeByCode(employeeCode);
             employeeManage.RecordAttendance(employee);
             Console.ForegroundColor = ConsoleColor.Green;
+            Console.Clear();
+            Console.Beep();
+            Console.WriteLine("Ponto registrado com sucesso! Informações do registro: ");
+            Console.WriteLine();
+
             Console.WriteLine($"Colaborador: {employee.Nome}");
 
-            Console.WriteLine();
-            Console.WriteLine($"Data de registro: {data.ToString("yyyy-MM-dd")}");
+            Console.WriteLine($"Data: {data.ToString("yyyy-MM-dd")}");
+
+            Console.WriteLine($"Horário: {data.ToString("HH:mm:ss")}");
+
 
             Console.WriteLine();
-            Console.WriteLine($"Horário de registro: {data.ToString("HH:mm:ss")}");
+            Console.WriteLine();
+            Console.WriteLine("Pressione qualquer tecla para um novo registro");
+            Console.ReadKey();
+
+            Console.Clear();
+            Main();
 
         }
         else
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Código de funcionário inválido.");
+            Console.Beep();
+            Console.Beep();
+            Console.WriteLine("Por favor insira um código válido.");
+
+            Main();
         }
     }
 }
