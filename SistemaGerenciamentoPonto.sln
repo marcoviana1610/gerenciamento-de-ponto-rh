@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaGerenciamentoPonto", "SistemaGerenciamentoPonto\SistemaGerenciamentoPonto.csproj", "{BEAAB3EB-C611-4CD2-A4FE-F4FDFAFA5AD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEAAB3EB-C611-4CD2-A4FE-F4FDFAFA5AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEAAB3EB-C611-4CD2-A4FE-F4FDFAFA5AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEAAB3EB-C611-4CD2-A4FE-F4FDFAFA5AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEAAB3EB-C611-4CD2-A4FE-F4FDFAFA5AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1E7DD4D-E19B-4187-88EE-51F7399DE1AB}
+	EndGlobalSection
+EndGlobal
