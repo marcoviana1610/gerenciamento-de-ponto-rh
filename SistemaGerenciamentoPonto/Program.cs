@@ -1,4 +1,5 @@
-﻿using System.Media;
+﻿using SistemaGerenciamentoPonto;
+using System.Media;
 
 class Program
 {
@@ -10,8 +11,8 @@ class Program
 
         //Funcionarios
         employeeManage.AddEmployee(new Employee("144", "Marco Viana"));
-        employeeManage.AddEmployee(new Employee("145", "Fulano de Tal"));
-        employeeManage.AddEmployee(new Employee("146", "Ciclano de Tal"));
+        employeeManage.AddEmployee(new Employee("145", "Fulano"));
+        employeeManage.AddEmployee(new Employee("146", "Ciclano"));
         employeeManage.AddEmployee(new Employee("147", "Beltrano"));
         employeeManage.AddEmployee(new Employee("148", "Joãozinho"));
         employeeManage.AddEmployee(new Employee("149", "Mariazinha"));
@@ -62,42 +63,5 @@ class Program
 
             Main();
         }
-    }
-}
-
-class Employee
-{
-    public string Codigo { get; set; }
-    public string Nome { get; set; }
-
-    public Employee(string codigo, string nome)
-    {
-        Codigo = codigo;
-        Nome = nome;
-    }
-}
-
-class EmployeeManage
-{
-    private List<Employee> employees = new List<Employee>();
-
-    public void AddEmployee(Employee employee)
-    {
-        employees.Add(employee);
-    }
-
-    public bool ValidateEmployee(string codigo)
-    {
-        return employees.Exists(x => x.Codigo == codigo);
-    }
-
-    public void RecordAttendance(Employee employee)
-    {
-        //
-    }
-
-    public Employee GetEmployeeByCode(string codigo)
-    {
-        return employees.Find(e => e.Codigo == codigo);
     }
 }
